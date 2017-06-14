@@ -42,8 +42,9 @@ public class LoginMktPlaceChromeTest{
 	@When("^User LogOut from the Application Chrome$")
 	public void user_LogOut_from_the_Application() throws Throwable {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
-        driver.findElement(By.cssSelector("#business-units > a > strong")).click();
-        driver.findElement(By.linkText("Sair")).click();
+        driver.findElement(By.xpath("//*[@id='business-units']/a/strong")).click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("//*[@id='sair']/a")).click();
     }
 
 	@Then("^Message displayed Logout Successfully Chrome$")
