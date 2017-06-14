@@ -3,7 +3,7 @@ package br.com.b2w.marketplace.RegMktPlaceMaven.cucumberTest;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.*;
 import org.openqa.selenium.support.ui.Select;
 import cucumber.api.java.en.*;
 
@@ -14,7 +14,7 @@ public class LoginMktPlaceTest{
 	public void user_is_on_Home_Page() throws Throwable {
 		System.setProperty("webdriver.gecko.driver", "/Users/default/Documents/workspace/RegMktPlaceMaven/src/test/java/Resources/geckodriver");
         driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://hml.bonmarketplace.back.b2w/#/login");
        
 	}
