@@ -65,8 +65,8 @@ public class NavegacaoDashboardTest {
 		System.out.println(strng1);
 		
 		//texto 2		
-		//WebDriverWait wait = new WebDriverWait(driver,20);
-		//setAboutMe(wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Aumente suas vendas com frete grátis ou desconto']"))));
+		WebDriverWait wait = new WebDriverWait(driver,20);
+		setAboutMe(wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Aumente suas vendas com frete grátis ou desconto']"))));
 		
 		WebElement element2 = driver.findElement(By.xpath("//span[text()='Aumente suas vendas com frete grátis ou desconto']")); 		
 		String strng2 = element2.getText();
