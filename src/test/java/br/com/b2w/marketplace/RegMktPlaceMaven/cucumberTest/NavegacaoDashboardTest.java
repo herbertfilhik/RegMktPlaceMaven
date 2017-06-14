@@ -20,7 +20,7 @@ public class NavegacaoDashboardTest {
 	
 	@Given("^Usuário está na página Dashboard$") 
 	public void usuariodashboard() throws Throwable {	
-		System.setProperty("webdriver.gecko.driver", "/Users/default/Downloads/geckodriver");
+		System.setProperty("webdriver.gecko.driver", "/Users/default/Documents/workspace/RegMktPlaceMaven/src/test/java/Resources/geckodriver");
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://hml.bonmarketplace.back.b2w/#/login");

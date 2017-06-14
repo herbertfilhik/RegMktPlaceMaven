@@ -12,7 +12,7 @@ public class LoginMktPlaceTest{
 	public static WebDriver driver;
 	@Given("^User is on Home Page$")
 	public void user_is_on_Home_Page() throws Throwable {
-		System.setProperty("webdriver.gecko.driver", "/Users/default/Downloads/geckodriver");
+		System.setProperty("webdriver.gecko.driver", "/Users/default/Documents/workspace/RegMktPlaceMaven/src/test/java/Resources/geckodriver");
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://hml.bonmarketplace.back.b2w/#/login");

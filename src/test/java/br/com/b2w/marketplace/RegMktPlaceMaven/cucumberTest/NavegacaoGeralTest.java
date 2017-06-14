@@ -6,17 +6,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import br.com.b2w.marketplace.RegMktPlaceMaven.stepDefinition.TestRunner;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import junit.textui.TestRunner;
 
 public class NavegacaoGeralTest extends TestRunner{
 	public static WebDriver driver;
 	
 	@Given("^Usuário está na página$")
 	public void usuarionapagina() throws Throwable {
-		System.setProperty("webdriver.gecko.driver", "/Users/default/Downloads/geckodriver");
+		System.setProperty("webdriver.gecko.driver", "/Users/default/Documents/workspace/RegMktPlaceMaven/src/test/java/Resources/geckodriver");
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://hml.bonmarketplace.back.b2w/#/login");
