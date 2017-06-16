@@ -1,11 +1,11 @@
-Feature: Navegacao Dashboard
+Feature: Navegacao Meus Produtos
 
-  Scenario: Navegacao Dashboard
-    Given Usuário está na página Dashboard
-    When Usuário faz login na página Dashboard
-    And usuário digita usuário e senha Dashboard
-    Then exibe mensagem de sucesso do login Dashboard
-    Then usuário navega até o menu Dashboard
-    Then usuário valida itens da tela e seus acessos Dashboard
-    When usuário efetua logout Dashboard
-    Then mensagem ao usuário informando o logout com sucesso Dashboard
+  Scenario: Navegacao Meus Produtos
+    Given Usuário está na página Meus Produtos
+    When Usuário faz login na página Meus Produtos
+    And usuário digita usuário e senha Meus Produtos
+    Then exibe mensagem de sucesso do login Meus Produtos
+    Then usuário navega até o menu Meus Produtos
+    Then usuário valida itens da tela e seus acessos Meus Produtos
+    When usuário efetua logout Meus Produtos
+    Then mensagem ao usuário informando o logout com sucesso Meus Produtos

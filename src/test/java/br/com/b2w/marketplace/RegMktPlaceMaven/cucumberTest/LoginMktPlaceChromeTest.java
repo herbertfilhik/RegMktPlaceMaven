@@ -42,7 +42,7 @@ public class LoginMktPlaceChromeTest{
 	@When("^User LogOut from the Application Chrome$")
 	public void user_LogOut_from_the_Application() throws Throwable {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
-        driver.findElement(By.xpath("//*[@id='business-units']/a/strong")).click();
+        driver.findElement(By.cssSelector("strong.ng-binding")).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//*[@id='sair']/a")).click();
     }

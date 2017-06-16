@@ -14,12 +14,12 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebElement;
 
-public class NavegacaoDashboardTest {
+public class NavegacaoMeusProdutosTest {
 	public static WebDriver driver;
 	private WebElement aboutMe;
 	
-	@Given("^Usuário está na página Dashboard$") 
-	public void usuariodashboard() throws Throwable {	
+	@Given("^Usuário está na página Meus Produtos$") 
+	public void usuarioMeusProdutos() throws Throwable {	
 		System.setProperty("webdriver.gecko.driver", "/Users/default/Documents/workspace/RegMktPlaceMaven/src/test/java/Resources/geckodriver");
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -27,35 +27,34 @@ public class NavegacaoDashboardTest {
         System.out.println("Na Página");
 	}
 
-	@When("^Usuário faz login na página Dashboard$")
-	public void pgdashboard() throws Throwable {
+	@When("^Usuário faz login na página Meus Produtos$")
+	public void pgMeusProdutos() throws Throwable {
 		driver.findElement(By.xpath("//*[@id='access']/a")).click();
 		System.out.println("No login");
 	}
 
-	@When("^usuário digita usuário e senha Dashboard$")
-	public void pgdashboardusuario() throws Throwable {
+	@When("^usuário digita usuário e senha Meus Produtos$")
+	public void pgMeusProdutosusuario() throws Throwable {
 		driver.findElement(By.id("loginname")).sendKeys("sub_ti_herbert"); 	 
 	    driver.findElement(By.id("loginpwd")).sendKeys("dwr9980");
 	    driver.findElement(By.xpath("//*[@id='access']/form/fieldset[1]/div[3]/button")).click();
 	    System.out.println("Acessei");
 	}
 
-	@Then("^exibe mensagem de sucesso do login Dashboard$")
-	public void sucessouserdash() throws Throwable {
+	@Then("^exibe mensagem de sucesso do login Meus Produtos$")
+	public void sucessouserprod() throws Throwable {
 	    new Select(driver.findElement(By.xpath("//div[@id='customers']/select"))).selectByVisibleText("MONTELLA123");
 	    driver.findElement(By.id("menu-cadastro")).click();
-	    System.out.println("Login Successfully2");
+	    System.out.println("Login Successfully Produtos");
 	}
 
-	@Then("^usuário navega até o menu Dashboard$")
-	public void navegadash() throws Throwable {
-		driver.get("http://hml.bonmarketplace.back.b2w/#/itens/novo-ean");
-		driver.get("http://hml.bonmarketplace.back.b2w/#/dashboard");
-		System.out.println("Estou na Dash");
+	@Then("^usuário navega até o menu Meus Produtos$")
+	public void navegaprod() throws Throwable {
+		driver.get("http://hml.bonmarketplace.back.b2w/v2/#/itens/meus");
+		System.out.println("Estou nos meus produtos");
 	}
 	
-	@Then("^usuário valida itens da tela e seus acessos Dashboard$")
+	@Then("^usuário valida itens da tela e seus acessos Meus Produtos$")
 	public void validaitens() throws Throwable {
 		
 		//texto 1
@@ -91,24 +90,24 @@ public class NavegacaoDashboardTest {
 		Assert.assertEquals("Veja seu saldo e valores das suas vendas", strng5);
 		System.out.println(strng5);
 		
-		System.out.println("Asserts realizados com sucesso");
+		System.out.println("Asserts realizados com sucesso meus produtos");
 		
 	}
 
-	@When("^usuário efetua logout Dashboard$")
+	@When("^usuário efetua logout Meus Produtos$")
 	public void usuariorealizalogout() throws Throwable {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
         driver.findElement(By.cssSelector("strong.ng-binding")).click();
         driver.findElement(By.linkText("Sair")).click();
-        System.out.println("Logout com sucesso");
+        System.out.println("Logout com sucesso meus produtos");
 	}
 
 
-	@Then("^mensagem ao usuário informando o logout com sucesso Dashboard$") 
+	@Then("^mensagem ao usuário informando o logout com sucesso Meus Produtos$") 
 	public void mensagemsucessologout() throws Throwable {
         System.out.println("LogOut Successfully");
         driver.quit();
-        System.out.println("Driver quit Successfully");
+        System.out.println("Driver quit Successfully meus produtos");
 	}
 
 	public WebElement getAboutMe() {
