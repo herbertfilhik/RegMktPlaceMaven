@@ -58,37 +58,52 @@ public class NavegacaoMeusProdutosTest {
 	public void validaitens() throws Throwable {
 		
 		//texto 1
-		WebElement element1 = driver.findElement(By.xpath("//span[text()='Atualize seu catálogo, preço e estoque']"));
+		WebElement element1 = driver.findElement(By.xpath("/html/body/div[1]/main/div/div[1]/a[1]"));
 		String strng1 = element1.getText();
-		Assert.assertEquals("Atualize seu catálogo, preço e estoque", strng1);
+		Assert.assertEquals("Vejas as dicas na FAQ", strng1);
 		System.out.println(strng1);
 		
 		//texto 2		
-		WebDriverWait wait = new WebDriverWait(driver,20);
-		setAboutMe(wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Aumente suas vendas com frete grátis ou desconto']"))));
-		
-		WebElement element2 = driver.findElement(By.xpath("//span[text()='Aumente suas vendas com frete grátis ou desconto']")); 		
+		WebElement element2 = driver.findElement(By.xpath("/html/body/div[1]/main/div/div[1]/a[2]")); 		
 		String strng2 = element2.getText();
-		Assert.assertEquals("Aumente suas vendas com frete grátis ou desconto", strng2);	
+		Assert.assertEquals("Estrutura e departamentos da B2W", strng2);	
 		System.out.println(strng2);
 		
 		//texto 3
-		WebElement element3 = driver.findElement(By.xpath("//span[text()='Veja seus novos pedidos e atualize os status']"));
+		WebElement element3 = driver.findElement(By.xpath("/html/body/div[1]/main/div/div[4]/div[1]/div[2]/div/div[1]/div/label"));
 		String strng3 = element3.getText();
-		Assert.assertEquals("Veja seus novos pedidos e atualize os status", strng3);		
+		Assert.assertEquals("Cadastrados", strng3);		
 		System.out.println(strng3);
 		
 		//texto 4
-		WebElement element4 = driver.findElement(By.xpath("//span[text()='Acompanhe e responda aos chamados dos clientes']"));
+		WebElement element4 = driver.findElement(By.xpath("/html/body/div[1]/main/div/div[4]/div[1]/div[2]/div/div[2]/div/label"));
 		String strng4 = element4.getText();
-		Assert.assertEquals("Acompanhe e responda aos chamados dos clientes", strng4);		
+		Assert.assertEquals("Inativos", strng4);		
 		System.out.println(strng4);
 		
 		//texto 5
-		WebElement element5 = driver.findElement(By.xpath("//span[text()='Veja seu saldo e valores das suas vendas']"));
+		WebElement element5 = driver.findElement(By.xpath("/html/body/div[1]/main/div/div[4]/div[2]/div[3]/div/div[1]/label"));
 		String strng5 = element5.getText();
-		Assert.assertEquals("Veja seu saldo e valores das suas vendas", strng5);
+		Assert.assertEquals("Reprovado Produção", strng5);
 		System.out.println(strng5);
+		
+		//texto 6
+		WebElement element6 = driver.findElement(By.xpath("/html/body/div[1]/main/div/div[4]/div[2]/div[3]/div/div[2]/label"));
+		String strng6 = element6.getText();
+		Assert.assertEquals("Confirm. de Preço", strng6);
+		System.out.println(strng6);
+		
+		//texto 7
+		WebElement element7 = driver.findElement(By.xpath("/html/body/div[1]/main/div/div[4]/div[2]/div[4]/div/label"));
+		String strng7 = element7.getText();
+		Assert.assertEquals("Pendência Interna", strng7);
+		System.out.println(strng7);
+		
+		//texto 8
+		WebElement element8 = driver.findElement(By.xpath("/html/body/div[1]/main/div/div[4]/div[2]/div[5]/div/label"));
+		String strng8 = element8.getText();
+		Assert.assertEquals("Publicados", strng8);
+		System.out.println(strng8);
 		
 		System.out.println("Asserts realizados com sucesso meus produtos");
 		
@@ -97,7 +112,7 @@ public class NavegacaoMeusProdutosTest {
 	@When("^usuário efetua logout Meus Produtos$")
 	public void usuariorealizalogout() throws Throwable {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
-        driver.findElement(By.cssSelector("strong.ng-binding")).click();
+        driver.findElement(By.cssSelector(".usuario > ul:nth-child(1) > li:nth-child(2) > a:nth-child(1)")).click();
         driver.findElement(By.linkText("Sair")).click();
         System.out.println("Logout com sucesso meus produtos");
 	}

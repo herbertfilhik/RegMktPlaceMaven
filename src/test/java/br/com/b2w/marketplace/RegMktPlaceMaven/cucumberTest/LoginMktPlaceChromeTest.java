@@ -36,14 +36,23 @@ public class LoginMktPlaceChromeTest{
 		equals(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*$"));
 	    new Select(driver.findElement(By.xpath("//div[@id='customers']/select"))).selectByVisibleText("MONTELLA123");
 	    driver.findElement(By.id("menu-cadastro")).click();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	    System.out.println("Login Successfully Chrome");
 	}
 
 	@When("^User LogOut from the Application Chrome$")
 	public void user_LogOut_from_the_Application() throws Throwable {
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
-        driver.findElement(By.cssSelector("strong.ng-binding")).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.get("http://hml.bonmarketplace.back.b2w/#/login");
+        driver.get("http://hml.bonmarketplace.back.b2w/#/login");
+        driver.get("http://hml.bonmarketplace.back.b2w/#/login");
+        driver.get("http://hml.bonmarketplace.back.b2w/#/login");
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    System.out.println("Passei aqui");       
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("//*[@id='business-units']/a/img")).click();
+        System.out.println("Passei aqui");
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        System.out.println("Passei aqui");
         driver.findElement(By.xpath("//*[@id='sair']/a")).click();
     }
 
