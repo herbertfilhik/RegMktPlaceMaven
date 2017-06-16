@@ -60,14 +60,12 @@ public class NavegacaoDashboardTest {
 	public void validaitens() throws Throwable {
 		
 		//texto 1
-		driver.get("http://hml.bonmarketplace.back.b2w/#/dashboard");
 		WebElement element1 = driver.findElement(By.xpath("//span[text()='Atualize seu catálogo, preço e estoque']"));
 		String strng1 = element1.getText();
 		Assert.assertEquals("Atualize seu catálogo, preço e estoque", strng1);
 		System.out.println(strng1);
 		
 		//texto 2		
-		driver.get("http://hml.bonmarketplace.back.b2w/#/dashboard");
 		//WebDriverWait wait = new WebDriverWait(driver,20);
 		//setAboutMe(wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Aumente suas vendas com frete grátis ou desconto']"))));
 		WebElement element2 = driver.findElement(By.xpath("//span[text()='Aumente suas vendas com frete grátis ou desconto']")); 		
@@ -76,21 +74,18 @@ public class NavegacaoDashboardTest {
 		System.out.println(strng2);
 		
 		//texto 3
-		driver.get("http://hml.bonmarketplace.back.b2w/#/dashboard");
 		WebElement element3 = driver.findElement(By.xpath("//span[text()='Veja seus novos pedidos e atualize os status']"));
 		String strng3 = element3.getText();
 		Assert.assertEquals("Veja seus novos pedidos e atualize os status", strng3);		
 		System.out.println(strng3);
 		
 		//texto 4
-		driver.get("http://hml.bonmarketplace.back.b2w/#/dashboard");
 		WebElement element4 = driver.findElement(By.xpath("//span[text()='Acompanhe e responda aos chamados dos clientes']"));
 		String strng4 = element4.getText();
 		Assert.assertEquals("Acompanhe e responda aos chamados dos clientes", strng4);		
 		System.out.println(strng4);
 		
 		//texto 5
-		driver.get("http://hml.bonmarketplace.back.b2w/#/dashboard");
 		WebElement element5 = driver.findElement(By.xpath("//span[text()='Veja seu saldo e valores das suas vendas']"));
 		String strng5 = element5.getText();
 		Assert.assertEquals("Veja seu saldo e valores das suas vendas", strng5);
