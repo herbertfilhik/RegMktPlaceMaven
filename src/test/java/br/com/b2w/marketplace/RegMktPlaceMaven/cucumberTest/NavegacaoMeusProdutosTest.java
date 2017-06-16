@@ -20,7 +20,8 @@ public class NavegacaoMeusProdutosTest {
 	
 	@Given("^Usuário está na página Meus Produtos$") 
 	public void usuarioMeusProdutos() throws Throwable {	
-		System.setProperty("webdriver.gecko.driver", "/Users/default/Documents/workspace/RegMktPlaceMaven/src/test/java/Resources/geckodriver");
+		//System.setProperty("webdriver.gecko.driver", "/Users/default/Documents/workspace/RegMktPlaceMaven/src/test/java/Resources/geckodriver");
+		Resources.GlobalResources.driverbrowserfirefox();
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://hml.bonmarketplace.back.b2w/#/login");

@@ -9,12 +9,20 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class GlobalResources {
 	
 	public static WebDriver driver;
-	static String login = "sub_ti_herbert";
-	static String passw = "dwr9980";
+	public static String login = "sub_ti_herbert";
+	public static String passw = "dwr9980";
 	
-	public static void logarnoportal(){
+	public static void driverbrowserfirefox(){
+		System.setProperty("webdriver.gecko.driver", "./src/test/java/Resources/geckodriver");
+	}
+	
+	public static void driverbrowserchrome(){
+		System.setProperty("webdriver.chrome.driver", "./src/test/java/Resources/chromedriver");
+	}
+	
+	public static void logarnoportalfirefox(){
 		WebDriver driver;
-		System.setProperty("webdriver.gecko.driver", "/Users/default/Documents/workspace/RegMktPlaceMaven/src/test/java/Resources/geckodriver");
+		driverbrowserfirefox();
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://hml.bonmarketplace.back.b2w/#/login");
@@ -24,5 +32,11 @@ public class GlobalResources {
 	    driver.findElement(By.xpath("//*[@id='access']/form/fieldset[1]/div[3]/button")).click();      
 	}
 	
+	public static void user(){
+	    driver.findElement(By.id("loginname")).sendKeys(login);	
+	}
 	
+	public static void passwd(){
+	    driver.findElement(By.id("loginpwd")).sendKeys(passw);	
+	}
 }

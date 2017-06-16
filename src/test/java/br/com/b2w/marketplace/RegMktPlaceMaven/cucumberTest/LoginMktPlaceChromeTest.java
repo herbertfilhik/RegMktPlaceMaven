@@ -12,8 +12,9 @@ public class LoginMktPlaceChromeTest{
 	public static WebDriver driver;
 	@Given("^User is on Home Page Chrome$")
 	public void user_is_on_Home_Page() throws Throwable {
-		System.setProperty("webdriver.chrome.driver", "/Users/default/Documents/workspace/RegMktPlaceMaven/src/test/java/Resources/chromedriver");
-        driver = new ChromeDriver();
+		//System.setProperty("webdriver.chrome.driver", "/Users/default/Documents/workspace/RegMktPlaceMaven/src/test/java/Resources/chromedriver");
+		Resources.GlobalResources.driverbrowserchrome();
+		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://hml.bonmarketplace.back.b2w/#/login");
        
