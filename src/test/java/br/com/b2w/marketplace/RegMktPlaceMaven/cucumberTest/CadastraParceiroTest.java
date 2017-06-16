@@ -39,7 +39,9 @@ public class CadastraParceiroTest {
 	    driver.findElement(By.id("trade")).sendKeys(data.get(3).get(1).toString());
 	    driver.findElement(By.id("stateRegister")).sendKeys(data.get(4).get(1).toString());
 	    driver.findElement(By.id("site")).sendKeys(data.get(5).get(1).toString());
-	    new Select(driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/form/fieldset[1]/article/div/div/div/div[8]/span[1]/select"))).selectByVisibleText(data.get(6).get(1).toString());
+	    //new Select(driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/form/fieldset[1]/article/div/div/div/div[8]/span[1]/select"))).selectByVisibleText(data.get(6).get(1).toString());
+	    new Select(driver.findElement(By.xpath("//*[@id='income']"))).selectByVisibleText(data.get(6).get(1).toString());
+	    
 	    System.out.println("Preenchendo dados");
 	    driver.findElement(By.cssSelector("#income > option[value=\"4\"]")).click();
 	    driver.findElement(By.id("nome")).sendKeys(data.get(7).get(1).toString());
