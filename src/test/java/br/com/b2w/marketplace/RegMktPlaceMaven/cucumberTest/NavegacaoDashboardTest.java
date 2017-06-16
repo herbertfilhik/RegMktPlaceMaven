@@ -9,6 +9,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import Resources.GlobalResources;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -36,8 +38,8 @@ public class NavegacaoDashboardTest {
 
 	@When("^usuário digita usuário e senha Dashboard$")
 	public void pgdashboardusuario() throws Throwable {
-		driver.findElement(By.id("loginname")).sendKeys("sub_ti_herbert"); 	 
-	    driver.findElement(By.id("loginpwd")).sendKeys("dwr9980");
+		driver.findElement(By.id("loginname")).sendKeys(GlobalResources.LOGIN); 	 
+	    driver.findElement(By.id("loginpwd")).sendKeys(GlobalResources.PASSW);
 	    driver.findElement(By.xpath("//*[@id='access']/form/fieldset[1]/div[3]/button")).click();
 	    System.out.println("Acessei");
 	}

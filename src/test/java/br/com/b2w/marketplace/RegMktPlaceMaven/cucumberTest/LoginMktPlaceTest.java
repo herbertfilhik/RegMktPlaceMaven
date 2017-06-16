@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.*;
 import org.openqa.selenium.support.ui.Select;
+import Resources.GlobalResources;
 import cucumber.api.java.en.*;
 
 public class LoginMktPlaceTest{
@@ -28,9 +29,10 @@ public class LoginMktPlaceTest{
 
 	@When("^User enters UserName and Password$")
 	public void user_enters_UserName_and_Password() throws Throwable {
-		driver.findElement(By.id("loginname")).sendKeys("sub_ti_herbert"); 	 
-	    driver.findElement(By.id("loginpwd")).sendKeys("dwr9980");
-	    driver.findElement(By.xpath("//*[@id='access']/form/fieldset[1]/div[3]/button")).click();
+		driver.findElement(By.id("loginname")).sendKeys(GlobalResources.LOGIN); 	 
+	    driver.findElement(By.id("loginpwd")).sendKeys(GlobalResources.PASSW);
+	    
+		driver.findElement(By.xpath("//*[@id='access']/form/fieldset[1]/div[3]/button")).click();
 		}
 
 	@Then("^Message displayed Login Successfully$")

@@ -5,11 +5,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import Resources.GlobalResources;
 import cucumber.api.java.en.*;
 
 public class LoginMktPlaceChromeTest{
 	
 	public static WebDriver driver;
+	
 	@Given("^User is on Home Page Chrome$")
 	public void user_is_on_Home_Page() throws Throwable {
 		//System.setProperty("webdriver.chrome.driver", "/Users/default/Documents/workspace/RegMktPlaceMaven/src/test/java/Resources/chromedriver");
@@ -27,8 +29,8 @@ public class LoginMktPlaceChromeTest{
 
 	@When("^User enters UserName and Password Chrome$")
 	public void user_enters_UserName_and_Password() throws Throwable {
-		driver.findElement(By.id("loginname")).sendKeys("sub_ti_herbert"); 	 
-	    driver.findElement(By.id("loginpwd")).sendKeys("dwr9980");
+		driver.findElement(By.id("loginname")).sendKeys(GlobalResources.LOGIN); 	 
+	    driver.findElement(By.id("loginpwd")).sendKeys(GlobalResources.PASSW);
 	    driver.findElement(By.xpath("//*[@id='access']/form/fieldset[1]/div[3]/button")).click();
 		}
 
