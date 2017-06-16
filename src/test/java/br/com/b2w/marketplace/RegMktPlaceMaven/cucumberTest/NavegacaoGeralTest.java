@@ -169,6 +169,7 @@ public class NavegacaoGeralTest extends TestRunner{
 	public void usuariorealizalogout() throws Throwable {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
         driver.findElement(By.cssSelector("strong.ng-binding")).click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
         driver.findElement(By.linkText("Sair")).click();
 	}
 	
