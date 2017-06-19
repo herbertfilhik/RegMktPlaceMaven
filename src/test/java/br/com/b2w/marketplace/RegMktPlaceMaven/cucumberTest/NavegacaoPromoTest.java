@@ -19,9 +19,7 @@ public class NavegacaoPromoTest {
 		System.out.println("Acessei o Portal");
 	    driver.get("http://hml.bonmarketplace.back.b2w/#/login");
 	    driver.findElement(By.linkText("Acesso ao portal")).click();
-	    driver.findElement(By.id("loginpwd")).clear();
 		driver.findElement(By.id("loginname")).sendKeys(GlobalResources.LOGIN); 	 
-	    driver.findElement(By.id("loginname")).clear();
 	    driver.findElement(By.id("loginpwd")).sendKeys(GlobalResources.PASSW);
 	    driver.findElement(By.xpath("//button[@type='submit']")).click();
 	    System.out.println("Loguei no Portal");
@@ -33,6 +31,7 @@ public class NavegacaoPromoTest {
     
     @And("^navega pela tela de promocao$")
     public void navtelapromo() throws Throwable {
+    	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     	System.out.println("Navegando pela tela de promoção");
 	    driver.findElement(By.xpath("(//button[@type='button'])[4]")).click();
 	    driver.findElement(By.linkText("Ativas 126")).click();
@@ -77,6 +76,7 @@ public class NavegacaoPromoTest {
     	System.out.println("Realizando o logout");
 	    driver.findElement(By.cssSelector("b.caret")).click();
 	    driver.findElement(By.linkText("Sair")).click();
+	    driver.quit();
     	System.out.println("Finalizei o teste");
     }   
 }
