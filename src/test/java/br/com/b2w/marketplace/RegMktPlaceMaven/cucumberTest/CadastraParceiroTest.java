@@ -70,5 +70,9 @@ public class CadastraParceiroTest {
 	    driver.findElement(By.cssSelector("option[value=\"38\"]")).click();
 	    driver.findElement(By.xpath("(//button[@type='submit'])[2]")).click();
 	    System.out.println("Finalizei o cadastro");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
+        System.out.println("LogOut Successfully");
+        driver.quit();
+        System.out.println("Driver quit Successfully");	    
 	  }
 }
