@@ -16,13 +16,13 @@ Feature: Cadastra Parceiro
       | document          |                40276534000163 |
       | phone             | "(40) 2765-34000"             |
       | mail              | 40276534000163@teste.com.br   |
-      | plataform         | "VTEX"                        |
-      | integrator 				| "VTEX"                        |     
+      | plataform         | VTEX                          |
+      | integrator 				| VTEX                          |     
       | cep               | "40276-534"                   |
       | endereco          |                40276534000163 |
       | bairro            |                40276534000163 |
       | numero            |                           100 |
       | comp              |                40276534000163 |
-      | idEstado          | "Sao Paulo"                   |
-      | idMunicipio       | "Carapicuiba"                 |
-      | activity          | "TELEFONIA"                   |
+      | idEstado          | Sao Paulo                     |
+      | idMunicipio       | Carapicuiba                   |
+      | activity          | TELEFONIA                     |
