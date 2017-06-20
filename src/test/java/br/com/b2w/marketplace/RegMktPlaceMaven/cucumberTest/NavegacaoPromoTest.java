@@ -32,22 +32,54 @@ public class NavegacaoPromoTest {
     @And("^navega pela tela de promocao$")
     public void navtelapromo() throws Throwable {
     	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    	System.out.println("Navegando pela tela de promoção");
-	    driver.findElement(By.xpath("(//button[@type='button'])[4]")).click();
-	    driver.findElement(By.linkText("Ativas 126")).click();
-	    driver.findElement(By.xpath("(//button[@type='button'])[4]")).click();
-	    driver.findElement(By.linkText("Em Aprovação 1091")).click();
-	    driver.findElement(By.xpath("(//button[@type='button'])[4]")).click();
-	    driver.findElement(By.linkText("Finalizadas")).click();
-	    driver.findElement(By.xpath("(//button[@type='button'])[4]")).click();
-	    driver.findElement(By.linkText("Encerradas")).click();
-	    driver.findElement(By.xpath("(//button[@type='button'])[4]")).click();
-	    driver.findElement(By.linkText("Canceladas")).click();
-	    driver.findElement(By.xpath("(//button[@type='button'])[4]")).click();
-	    driver.findElement(By.linkText("Expiradas")).click();
-	    System.out.println("Navegando pela tela de promoção");
+    	System.out.println("Navegando pela tela de promoção")
+    	;
+    	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
+        driver.findElement(By.id("status.id")).click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.cssSelector(".btn-default")).click();
+        driver.findElement(By.cssSelector(".dropdown-menu > li:nth-child(2) > a:nth-child(1)")).click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.cssSelector(".btn-default")).click();
+        driver.findElement(By.cssSelector(".dropdown-menu > li:nth-child(3) > a:nth-child(1)")).click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.cssSelector(".btn-default")).click();
+        driver.findElement(By.cssSelector(".dropdown-menu > li:nth-child(4) > a:nth-child(1)")).click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.cssSelector(".btn-default")).click();
+        driver.findElement(By.cssSelector("#filtersContainer > div.row.mt-10 > div.col-md-2.filter-by-status > div > div > div > button > span:nth-child(1)")).click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.cssSelector(".btn-default")).click();
+        driver.findElement(By.cssSelector(".dropdown-menu > li:nth-child(5) > a:nth-child(1)")).click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.cssSelector(".btn-default")).click();
+        driver.findElement(By.cssSelector(".dropdown-menu > li:nth-child(6) > a:nth-child(1)")).click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.cssSelector(".btn-default")).click();
+        driver.findElement(By.cssSelector(".dropdown-menu > li:nth-child(7) > a:nth-child(1)")).click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.cssSelector(".btn-default")).click();
+        driver.findElement(By.cssSelector(".dropdown-menu > li:nth-child(8) > a:nth-child(1)")).click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        System.out.println("Navegando pela tela de promoção");
 	    driver.findElement(By.xpath("//div[@id='filtersContainer']/div[2]/div/div/div/ul/li/button")).click();
-	    driver.findElement(By.xpath("(//button[@type='button'])[4]")).click();
+	    driver.findElement(By.xpath("//*[@id='filtersContainer']/div[2]/div[2]/div/div/div/button")).click();
 	    driver.findElement(By.id("status.id")).click();
 	    driver.findElement(By.xpath("//div[@id='filtersContainer']/div[2]/div/div/div/ul/li[2]/button")).click();
 	    driver.findElement(By.xpath("//div[@id='filtersContainer']/div[2]/div/div/div/ul/li[3]/button")).click();
