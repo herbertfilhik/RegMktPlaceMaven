@@ -32,8 +32,9 @@ public class PromoFreteGratisTest {
     
     @And("^navega e preenche dados na tela de promocao Frete Gratis$")
 	public void usernavpromofrtgratis() throws Throwable {
+    	System.out.println("Cadastrando a Promoção de Frete Grátis");
 	    driver.findElement(By.id("promotionName")).clear();
-	    driver.findElement(By.id("promotionName")).sendKeys("123");
+	    driver.findElement(By.id("promotionName")).sendKeys("200620171743");
 	    driver.findElement(By.id("start")).click();
 	    driver.findElement(By.xpath("//th[3]")).click();
 	    driver.findElement(By.xpath("//th[3]")).click();
@@ -43,8 +44,11 @@ public class PromoFreteGratisTest {
 	    driver.findElement(By.id("start")).sendKeys("1 de Janeiro de 2018 00:00");
 	    driver.findElement(By.id("end")).clear();
 	    driver.findElement(By.id("end")).sendKeys("1 de Dezembro de 2018 00:00");
+   	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    driver.findElement(By.cssSelector((".promotion-detail > div:nth-child(6) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)"))).click();
+   	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	    new Select(driver.findElement(By.id("promotionType5"))).selectByVisibleText("Frete grátis");
-	    driver.findElement(By.cssSelector("option[value=\"frete\"]")).click();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	    driver.findElement(By.id("radio1")).click();
 	    driver.findElement(By.id("productValueMinimum")).clear();
 	    driver.findElement(By.id("productValueMinimum")).sendKeys("0,01");
@@ -53,6 +57,7 @@ public class PromoFreteGratisTest {
 	    driver.findElement(By.id("productAmountMinimum")).sendKeys("1");
 	    driver.findElement(By.id("rc")).click();
 	    driver.findElement(By.id("promotionType1")).click();
+	    System.out.println("Salvei a Promoção de Frete Grátis");
     }
     
     @And("^realizar o logout Frete Gratis$")
