@@ -23,32 +23,5 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/lib/tools.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="com.sun"/>
-			<attribute name="maven.artifactId" value="tools"/>
-			<attribute name="maven.version" value="0"/>
-			<attribute name="maven.scope" value="system"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/Users/default/.m2/repository/org/apache/ant/ant/1.8.3/ant-1.8.3.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.apache.ant"/>
-			<attribute name="maven.artifactId" value="ant"/>
-			<attribute name="maven.version" value="1.8.3"/>
-			<attribute name="maven.scope" value="test"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/Users/default/.m2/repository/com/google/guava/guava/21.0/guava-21.0.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="com.google.guava"/>
-			<attribute name="maven.artifactId" value="guava"/>
-			<attribute name="maven.version" value="21.0"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
