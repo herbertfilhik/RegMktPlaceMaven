@@ -58,14 +58,9 @@ public class AdesaoPromoFxDescTest {
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[3]/div/div/button")).click();    	
     	System.out.println("Cliquei em Salvar");
     	driver.findElement(By.cssSelector("html body div div div.layout_wrapper_2SpXq div.layout_wrapper-page_3_ctF.layout_wrapper--openMenu_10_oj div.layout_page_1-9TL div.layout_page-content_2X1zi div form.form_form_SCTr2 div.grid_container_2dTZC div.grid-row_row_1kqjs.grid-row_start-xs_B5bDg div.grid-col_col_3CpM-.grid-col_col-xs-12_1g8x-.grid-col_col-md-10_3Ajy_.grid-col_col-lg-8_1cssY.grid-col_col-md-offset-1_19PxK.grid-col_col-lg-offset-2_3-j19 div.form-actions_form-group-actions_2exH5 button.button_primary_2b89h.button_large_21Uuk")).click();  
-    	
     	System.out.println("Cliquei em Salvar");
-    	
     	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     	System.out.println("Cadastrei a AdesaoPromoFxDescTest");
-    	
-    	
-    	
     }
     
     @And("^realizar o logout AdesaoPromoFxDescTest$")
