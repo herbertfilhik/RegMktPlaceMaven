@@ -58,10 +58,9 @@ public class PromoAgPrecoTest {
         driver.findElement(By.id("percentValue")).sendKeys("49");
         driver.findElement(By.id("promotionType2")).click();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);        
-        
-
         driver.findElement(By.xpath("//span[2]/div/label")).click();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    	System.out.println("Configurando Agendamento de Preço");
         new Select(driver.findElement(By.id("department"))).selectByVisibleText("CDS & DVDS MUSICAIS");
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.findElement(By.cssSelector("option[value=\"17\"]")).click();
