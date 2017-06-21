@@ -32,46 +32,52 @@ public class NavegacaoPromoTest {
     @And("^navega pela tela de promocao$")
     public void navtelapromo() throws Throwable {
     	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    	System.out.println("Navegando pela tela de promoção")
-    	;
+    	System.out.println("Navegando pela tela de promoção");
     	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
         driver.findElement(By.id("status.id")).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.cssSelector(".btn-default")).click();
-        driver.findElement(By.cssSelector(".dropdown-menu > li:nth-child(2) > a:nth-child(1)")).click();
+        driver.findElement(By.cssSelector(".dropdown-menu > li:nth-child(1) > a:nth-child(1)")).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
+        System.out.println("Navegando pela tela de promoção");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.cssSelector(".btn-default")).click();
+        driver.findElement(By.cssSelector(".dropdown-menu > li:nth-child(2) > a:nth-child(1)")).click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        
+        System.out.println("Navegando pela tela de promoção");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.cssSelector(".btn-default")).click();
         driver.findElement(By.cssSelector(".dropdown-menu > li:nth-child(3) > a:nth-child(1)")).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+        System.out.println("Navegando pela tela de promoção");
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.findElement(By.cssSelector(".btn-default")).click();
         driver.findElement(By.cssSelector(".dropdown-menu > li:nth-child(4) > a:nth-child(1)")).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.findElement(By.cssSelector(".btn-default")).click();
-        driver.findElement(By.cssSelector("#filtersContainer > div.row.mt-10 > div.col-md-2.filter-by-status > div > div > div > button > span:nth-child(1)")).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
+        System.out.println("Navegando pela tela de promoção");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.cssSelector(".btn-default")).click();
         driver.findElement(By.cssSelector(".dropdown-menu > li:nth-child(5) > a:nth-child(1)")).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         
+        System.out.println("Navegando pela tela de promoção");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.cssSelector(".btn-default")).click();
         driver.findElement(By.cssSelector(".dropdown-menu > li:nth-child(6) > a:nth-child(1)")).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         
+        System.out.println("Navegando pela tela de promoção");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.cssSelector(".btn-default")).click();
         driver.findElement(By.cssSelector(".dropdown-menu > li:nth-child(7) > a:nth-child(1)")).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         
+        System.out.println("Navegando pela tela de promoção");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.cssSelector(".btn-default")).click();
         driver.findElement(By.cssSelector(".dropdown-menu > li:nth-child(8) > a:nth-child(1)")).click();
