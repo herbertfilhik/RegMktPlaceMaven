@@ -32,6 +32,7 @@ public class AdesaoPromoMeioPgtoTest {
     	System.out.println("Cadastrando a AdesaoPromoMeioPgtoTest");
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[1]/div/button")).click();
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[1]/div/div/input")).sendKeys("MeioPgto");
+    	//Submarino
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[2]/div/div/select/option[3]")).click();
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[3]/div/div/input")).sendKeys("MeioPgto");
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[4]/div/div/div/div/div/div[1]/div/select/option[2]")).click();

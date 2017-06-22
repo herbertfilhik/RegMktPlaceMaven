@@ -10,10 +10,10 @@ import org.openqa.selenium.support.ui.Select;
 import Resources.GlobalResources;
 import cucumber.api.java.en.*;
 
-public class AdesaoPromoFrGratisTest {
+public class AdesaoPromoFrGratisAmerTest {
 
 	public static WebDriver driver;
-    @Given("^usuario está na pagina de promocao AdesaoPromoFrGratisTest$")
+    @Given("^usuario está na pagina de promocao AdesaoPromoFrGratisAmerTest$")
 	public void userpromocaofrtgratis() throws Throwable {
 		Resources.GlobalResources.driverbrowserfirefox();
 		driver = new FirefoxDriver();
@@ -27,13 +27,13 @@ public class AdesaoPromoFrGratisTest {
 	    
     }
     
-    @And("^navega e preenche dados na tela de promocao AdesaoPromoFrGratisTest$")
+    @And("^navega e preenche dados na tela de promocao AdesaoPromoFrGratisAmerTest$")
 	public void usernavpromofrtgratis() throws Throwable {
-    	System.out.println("Cadastrando a AdesaoPromoFrGratisTest");
+    	System.out.println("Cadastrando a AdesaoPromoFrGratisAmerTest");
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[1]/div/button")).click();
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[1]/div/div/input")).sendKeys("FreteGratis");
-    	//Submarino
-    	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[2]/div/div/select/option[3]")).click();
+    	//Americanas
+    	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[2]/div/div/select/option[2]")).click();
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[3]/div/div/input")).sendKeys("FreteGratis");
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[4]/div/div/div/div/div/div[1]/div/select/option[2]")).click();
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[4]/div/div/div/div/div/div[2]/div/input")).sendKeys("12,00");
@@ -58,7 +58,7 @@ public class AdesaoPromoFrGratisTest {
     	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
     
-    @And("^realizar o logout AdesaoPromoFrGratisTest$")
+    @And("^realizar o logout AdesaoPromoFrGratisAmerTest$")
 	public void userpromofrtgratislogout() throws Throwable {
     	System.out.println("Realizando o logout");
 	    driver.quit();

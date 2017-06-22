@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 import Resources.GlobalResources;
 import cucumber.api.java.en.*;
 
-public class AdesaoPromoFxDescTest {
+public class AdesaoPromoFxDescAmerTest {
 
 	public static WebDriver driver;
     @Given("^usuario está na pagina de promocao AdesaoPromoFxDescTest$")
@@ -43,8 +43,8 @@ public class AdesaoPromoFxDescTest {
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[2]/section/div/div/div[1]/div/div/div[1]/div/select/option[2]")).click();
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[4]/section/div/div/div[1]/div/div/div[1]/button")).click(); 
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[4]/section/div/div/div[1]/div/div/div[1]/button")).click(); 
-    	//Submarino
-    	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[2]/div/div/select/option[3]")).click();
+    	//Americanas
+    	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[2]/div/div/select/option[2]")).click();
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[4]/section/div/div/div[1]/div/div/div[1]/button")).click();
     	System.out.println("Cadastrando a AdesaoPromoFxDescTest");
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[4]/section/div/div/div[1]/div/div/div/div/input")).sendKeys("20001837");
