@@ -61,14 +61,14 @@ public class AdesaoPromoFxDescTest {
     	System.out.println("Cliquei em Salvar");
     	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     	System.out.println("Cadastrei a AdesaoPromoFxDescTest");
+    	driver.findElement(By.cssSelector(".form_form_SCTr2 > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button:nth-child(2)")).click();
+    	
     }
     
     @And("^realizar o logout AdesaoPromoFxDescTest$")
 	public void userpromofrtgratislogout() throws Throwable {
     	System.out.println("Realizando o logout");
-    	//driver.findElement(By.xpath("/html/body/div[1]/div/div/nav/ul/li[1]/a/span")).click();
-    	
-	    //driver.quit();
+	    driver.quit();
     	System.out.println("Finalizei o teste");
     }    
 }

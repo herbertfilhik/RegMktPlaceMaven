@@ -12,6 +12,7 @@ public class GlobalResources {
 	public final static String LOGIN = "sub_ti_herbert";
 	public final static String PASSW = "dwr9980";
 	
+	
 	public static void driverbrowserfirefox(){
 		System.setProperty("webdriver.gecko.driver", "./src/test/java/Resources/geckodriver");
 	}
