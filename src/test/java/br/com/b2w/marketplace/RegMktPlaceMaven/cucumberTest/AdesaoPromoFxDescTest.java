@@ -30,8 +30,8 @@ public class AdesaoPromoFxDescTest {
     @And("^navega e preenche dados na tela de promocao AdesaoPromoFxDescTest$")
 	public void usernavpromofrtgratis() throws Throwable {
     	System.out.println("Cadastrando a AdesaoPromoFxDescTest");
-    	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[1]/div/div/input")).sendKeys("teste");
-    	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[3]/div/div/input")).sendKeys("teste");
+    	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[1]/div/div/input")).sendKeys("FaixaDeDesconto");
+    	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[3]/div/div/input")).sendKeys("FaixaDeDesconto");
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[5]/div/div[3]/div/div/input")).sendKeys("2");
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[2]/section/div/div/div[2]/div/div/input")).sendKeys("1000");
     	System.out.println("Cadastrando a AdesaoPromoFxDescTest");
