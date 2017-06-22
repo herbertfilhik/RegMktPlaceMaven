@@ -14,7 +14,7 @@ public class AdesaoPromoFxDescTest {
 
 	public static WebDriver driver;
     @Given("^usuario está na pagina de promocao AdesaoPromoFxDescTest$")
-	public void userpromocaofrtgratis() throws Throwable {
+	public void userpromocaofxdesc() throws Throwable {
 		Resources.GlobalResources.driverbrowserfirefox();
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -28,7 +28,7 @@ public class AdesaoPromoFxDescTest {
     }
     
     @And("^navega e preenche dados na tela de promocao AdesaoPromoFxDescTest$")
-	public void usernavpromofrtgratis() throws Throwable {
+	public void usernavpromofxdesc() throws Throwable {
     	System.out.println("Cadastrando a AdesaoPromoFxDescTest");
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[1]/div/div/input")).sendKeys("FaixaDeDesconto");
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[3]/div/div/input")).sendKeys("FaixaDeDesconto");
@@ -67,7 +67,7 @@ public class AdesaoPromoFxDescTest {
     }
     
     @And("^realizar o logout AdesaoPromoFxDescTest$")
-	public void userpromofrtgratislogout() throws Throwable {
+	public void userpromofxdesclogout() throws Throwable {
     	System.out.println("Realizando o logout");
 	    driver.quit();
     	System.out.println("Finalizei o teste");

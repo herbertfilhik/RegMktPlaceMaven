@@ -13,8 +13,8 @@ import cucumber.api.java.en.*;
 public class AdesaoPromoFxDescAmerTest {
 
 	public static WebDriver driver;
-    @Given("^usuario está na pagina de promocao AdesaoPromoFxDescTest$")
-	public void userpromocaofrtgratis() throws Throwable {
+    @Given("^usuario está na pagina de promocao AdesaoPromoFxDescAmerTest$")
+	public void userpromocaofxdescamer() throws Throwable {
 		Resources.GlobalResources.driverbrowserfirefox();
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -27,8 +27,8 @@ public class AdesaoPromoFxDescAmerTest {
 	    
     }
     
-    @And("^navega e preenche dados na tela de promocao AdesaoPromoFxDescTest$")
-	public void usernavpromofrtgratis() throws Throwable {
+    @And("^navega e preenche dados na tela de promocao AdesaoPromoFxDescAmerTest$")
+	public void usernavpromofxdescamer() throws Throwable {
     	System.out.println("Cadastrando a AdesaoPromoFxDescTest");
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[1]/div/div/input")).sendKeys("FaixaDeDesconto");
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[3]/div/div/input")).sendKeys("FaixaDeDesconto");
@@ -66,8 +66,8 @@ public class AdesaoPromoFxDescAmerTest {
     	
     }
     
-    @And("^realizar o logout AdesaoPromoFxDescTest$")
-	public void userpromofrtgratislogout() throws Throwable {
+    @And("^realizar o logout AdesaoPromoFxDescAmerTest$")
+	public void userpromofxdescamerlogout() throws Throwable {
     	System.out.println("Realizando o logout");
 	    driver.quit();
     	System.out.println("Finalizei o teste");

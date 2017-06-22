@@ -14,7 +14,7 @@ public class AdesaoPromoMeioPgtoTest {
 
 	public static WebDriver driver;
     @Given("^usuario está na pagina de promocao AdesaoPromoMeioPgtoTest$")
-	public void userpromocaofrtgratis() throws Throwable {
+	public void userpromocaomeiopgto() throws Throwable {
 		Resources.GlobalResources.driverbrowserfirefox();
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -28,7 +28,7 @@ public class AdesaoPromoMeioPgtoTest {
     }
     
     @And("^navega e preenche dados na tela de promocao AdesaoPromoMeioPgtoTest$")
-	public void usernavpromofrtgratis() throws Throwable {
+	public void usernavpromomeiopgto() throws Throwable {
     	System.out.println("Cadastrando a AdesaoPromoMeioPgtoTest");
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[1]/div/button")).click();
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[1]/div/div/input")).sendKeys("MeioPgto");
@@ -60,7 +60,7 @@ public class AdesaoPromoMeioPgtoTest {
     }
     
     @And("^realizar o logout AdesaoPromoMeioPgtoTest$")
-	public void userpromofrtgratislogout() throws Throwable {
+	public void userpromomeiopgtologout() throws Throwable {
     	System.out.println("Realizando o logout");
 	    //driver.quit();
     	System.out.println("Finalizei o teste");
