@@ -3,6 +3,7 @@ package br.com.b2w.marketplace.RegMktPlaceMaven.cucumberTest;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -12,43 +13,43 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import junit.textui.TestRunner;
 
-public class NavegacaoGeralTest extends TestRunner{
+public class NavegacaoGeralChromeTest extends TestRunner{
 	public static WebDriver driver;
 	
-	@Given("^Usuário está na página Chrome$")
+	@Given("^Usuário está na página$")
 	public void usuarionapagina() throws Throwable {
 		//System.setProperty("webdriver.gecko.driver", "/Users/default/Documents/workspace/RegMktPlaceMaven/src/test/java/Resources/geckodriver");
-		Resources.GlobalResources.driverbrowserfirefox();
-        driver = new FirefoxDriver();
+		Resources.GlobalResources.driverbrowserchrome();
+		driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://hml.bonmarketplace.back.b2w/#/login");
 		}
 
-	@When("^Usuário faz login na página Chrome$")
+	@When("^Usuário faz login na página$")
 	public void usuarionapaginadelogin() throws Throwable {
 		driver.findElement(By.xpath("//*[@id='access']/a")).click();
 		}
 
-	@When("^usuário digita usuário e senha Chrome$")
+	@When("^usuário digita usuário e senha$")
 	public void usuadigitausuaesenha() throws Throwable {
 		driver.findElement(By.id("loginname")).sendKeys(GlobalResources.LOGIN); 	 
 	    driver.findElement(By.id("loginpwd")).sendKeys(GlobalResources.PASSW);
 	    driver.findElement(By.xpath("//*[@id='access']/form/fieldset[1]/div[3]/button")).click();
 		}
 
-	@Then("^exibe mensagem de sucesso do login Chrome$")
+	@Then("^exibe mensagem de sucesso do login$")
 	public void exibemensagemsucesso() throws Throwable {
 		equals(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*$"));
 	    new Select(driver.findElement(By.xpath("//div[@id='customers']/select"))).selectByVisibleText("MONTELLA123");
 	    driver.findElement(By.id("menu-cadastro")).click();
-	    System.out.println("Login Successfully2");
+	    System.out.println("Login com sucesso chrome");
 	}
 
-	@Then("^usuário navega pelos menus Chrome$")
+	@Then("^usuário navega pelos menus$")
 	public void navegacaogeral() throws Throwable {
 
-		driver.findElement(By.xpath("/html/body/div[1]/header/nav/div/div[2]/ul/li[2]/a")).click();
-		driver.findElement(By.xpath("/html/body/div[1]/header/nav/div/div[2]/ul/li[2]/ul/li[1]/a")).click();
+		//driver.findElement(By.xpath("/html/body/div[1]/header/nav/div/div[2]/ul/li[2]/a")).click();
+		//driver.findElement(By.xpath("/html/body/div[1]/header/nav/div/div[2]/ul/li[2]/ul/li[1]/a")).click();
 		
 		driver.get("http://hml.bonmarketplace.back.b2w/#/dashboard");
 	    
@@ -79,7 +80,7 @@ public class NavegacaoGeralTest extends TestRunner{
 		//dashboard
 		driver.get("http://hml.bonmarketplace.back.b2w/#/dashboard");
 		
-		System.out.println("Navegação Geral (Menu Produtos) realizada com Sucesso");
+		System.out.println("Navegação Geral (Menu Produtos) realizada com Sucesso chrome");
 		
 		//pedidos
 		driver.get("http://hml.bonmarketplace.back.b2w/v2/#/pedidos");
@@ -102,7 +103,7 @@ public class NavegacaoGeralTest extends TestRunner{
 		//itens indisponíveis
 		driver.get("http://hml.bonmarketplace.back.b2w/#/itens/indisponiveis");
 		
-		System.out.println("Navegação Geral (Menu Vendas) realizada com Sucesso");
+		System.out.println("Navegação Geral (Menu Vendas) realizada com Sucesso chrome");
 		
 		//sac - atendimento ao cliente
 		driver.get("http://hml.bonmarketplace.back.b2w/v2/#/sac/customer-service");
@@ -110,7 +111,7 @@ public class NavegacaoGeralTest extends TestRunner{
 		//sac - troca e cancelamento
 		driver.get("http://hml.bonmarketplace.back.b2w/#/troca-cancelamento");
 		
-		System.out.println("Navegação Geral (Menu SAC) realizada com Sucesso");
+		System.out.println("Navegação Geral (Menu SAC) realizada com Sucesso chrome");
 		
 		//Financeiro - Conta-Corrente
 		driver.get("http://hml.bonmarketplace.back.b2w/v2/#/financeiro/conta-corrente");
@@ -130,7 +131,7 @@ public class NavegacaoGeralTest extends TestRunner{
 		//Financeiro - configurações financeiras 
 		driver.get("http://hml.bonmarketplace.back.b2w/v2/#/financeiro/plano-contrato");;
 		
-		System.out.println("Navegação Geral (Menu Financeiro) realizada com Sucesso");
+		System.out.println("Navegação Geral (Menu Financeiro) realizada com Sucesso chrome");
 		
 		//Configurações - meus dados
 		driver.get("http://hml.bonmarketplace.back.b2w/#/webstore/parceiro/contato");
@@ -147,7 +148,7 @@ public class NavegacaoGeralTest extends TestRunner{
 		//Configurações - Frete
 		driver.get("http://hml.bonmarketplace.back.b2w/v2/#/frete");
 		
-		System.out.println("Navegação Geral (Menu Configurações) realizada com Sucesso");
+		System.out.println("Navegação Geral (Menu Configurações) realizada com Sucesso chrome");
 		
 		//Ajuda - Faq
 		driver.get("http://hml.bonmarketplace.back.b2w/#/duvidas/faq");
@@ -160,14 +161,14 @@ public class NavegacaoGeralTest extends TestRunner{
 		
 		//Ajuda - Documentação da Api
 		
-		System.out.println("Navegação Geral (Menu Ajuda) realizada com Sucesso");
+		System.out.println("Navegação Geral (Menu Ajuda) realizada com Sucesso chrome");
 		
 		driver.get("http://hml.bonmarketplace.back.b2w/#/dashboard");
     
 	}
 	
 
-	@When("^usuário efetua logout Chrome$")
+	@When("^usuário efetua logout$")
 	public void usuariorealizalogout() throws Throwable {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
         driver.findElement(By.cssSelector("strong.ng-binding")).click();
@@ -175,10 +176,10 @@ public class NavegacaoGeralTest extends TestRunner{
         driver.findElement(By.linkText("Sair")).click();
 	}
 	
-	@Then("^mensagem ao usuário informando o logout com sucesso Chrome$")
+	@Then("^mensagem ao usuário informando o logout com sucesso$")
 	public void mensagemsucessologout() throws Throwable {
-        System.out.println("LogOut Successfully");
+        System.out.println("LogOut realizado com sucesso chrome");
         driver.quit();
-        System.out.println("Driver quit Successfully");
+        System.out.println("Saiu com sucesso chrome");
 	}
 }
