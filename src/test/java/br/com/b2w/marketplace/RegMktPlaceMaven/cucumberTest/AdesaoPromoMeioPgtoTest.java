@@ -62,7 +62,7 @@ public class AdesaoPromoMeioPgtoTest {
     @And("^realizar o logout AdesaoPromoMeioPgtoTest$")
 	public void userpromomeiopgtologout() throws Throwable {
     	System.out.println("Realizando o logout");
-	    //driver.quit();
+	    driver.quit();
     	System.out.println("Finalizei o teste");
     }    
 }
