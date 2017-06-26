@@ -30,8 +30,8 @@ public class AdesaoPromoFxDescShopTest {
     @And("^navega e preenche dados na tela de promocao AdesaoPromoFxDescShopTest$")
 	public void usernavpromofxdescshop() throws Throwable {
     	System.out.println("Cadastrando a AdesaoPromoFxDescTest");
-    	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[1]/div/div/input")).sendKeys("FaixaDeDesconto");
-    	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[3]/div/div/input")).sendKeys("FaixaDeDesconto");
+    	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[1]/div/div/input")).sendKeys("FaixaDeDescontoShoptime");
+    	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[3]/div/div/input")).sendKeys("FaixaDeDescontoShoptime");
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[5]/div/div[3]/div/div/input")).sendKeys("2");
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[2]/section/div/div/div[2]/div/div/input")).sendKeys("1000");
     	System.out.println("Cadastrando a AdesaoPromoFxDescTest");
@@ -47,7 +47,7 @@ public class AdesaoPromoFxDescShopTest {
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[2]/div/div/select/option[4]")).click();
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[4]/section/div/div/div[1]/div/div/div[1]/button")).click();
     	System.out.println("Cadastrando a AdesaoPromoFxDescTest");
-    	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[4]/section/div/div/div[1]/div/div/div/div/input")).sendKeys("20001837");
+    	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[4]/section/div/div/div[1]/div/div/div/div/input")).sendKeys("20000750");
     	WebElement webElement = driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[4]/section/div/div/div[1]/div/div/div/div/input"));
     	//webElement.sendKeys(Keys.TAB);
     	webElement.sendKeys(Keys.ENTER);

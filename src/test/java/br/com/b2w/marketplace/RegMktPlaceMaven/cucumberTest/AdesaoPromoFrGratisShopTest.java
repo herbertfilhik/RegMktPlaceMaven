@@ -21,7 +21,7 @@ public class AdesaoPromoFrGratisShopTest {
 		System.out.println("Acessei o Mkt Portal Adesao");
 	    driver.get("http://campaign-admin-v1.staging-b2w.atlas.b2w/new-discount-range");
 	    driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div/div/div/div/div/form/div[1]/div/input")).sendKeys("dimitri.lameri");
-	    driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div/div/div/div/div/form/div[2]/div/input")).sendKeys("Bwjessy12305");
+	    driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div/div/div/div/div/form/div[2]/div/input")).sendKeys("Bwjessy12306");
 	    driver.findElement(By.xpath("//button[@type='submit']")).click();
 	    driver.findElement(By.xpath("/html/body/div[1]/div/div/nav/ul/li[2]/a/span")).click();
 	    
@@ -31,10 +31,10 @@ public class AdesaoPromoFrGratisShopTest {
 	public void usernavpromofrtgratis() throws Throwable {
     	System.out.println("Cadastrando a AdesaoPromoFrGratisShopTest");
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[1]/div/button")).click();
-    	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[1]/div/div/input")).sendKeys("FreteGratis");
+    	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[1]/div/div/input")).sendKeys("FreteGratisShoptime");
     	//Shoptime
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[2]/div/div/select/option[4]")).click();
-    	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[3]/div/div/input")).sendKeys("FreteGratis");
+    	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[3]/div/div/input")).sendKeys("FreteGratisShoptime");
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[4]/div/div/div/div/div/div[1]/div/select/option[2]")).click();
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[4]/div/div/div/div/div/div[2]/div/input")).sendKeys("12,00");
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[5]/div/div[1]/div/div/div[1]/input")).sendKeys(" 21/06/2017 15:00");
@@ -42,7 +42,7 @@ public class AdesaoPromoFrGratisShopTest {
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[6]/div/div[1]/div/div/input")).click();
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[6]/div/div[2]/div/div/input")).click();
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[6]/div/div[3]/div/div/input")).sendKeys("1.111");
-    	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[3]/section/div/div/div[1]/div/div/div/div/input")).sendKeys("20001992");
+    	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[3]/section/div/div/div[1]/div/div/div/div/input")).sendKeys("20000750");
     	WebElement webElement = driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[3]/section/div/div/div[1]/div/div/div/div/input"));
     	//webElement.sendKeys(Keys.TAB);
     	webElement.sendKeys(Keys.ENTER);
