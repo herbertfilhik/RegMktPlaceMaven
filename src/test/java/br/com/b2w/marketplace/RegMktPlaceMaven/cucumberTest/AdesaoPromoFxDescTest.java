@@ -21,7 +21,7 @@ public class AdesaoPromoFxDescTest {
 		System.out.println("Acessei o Mkt Portal Adesao");
 	    driver.get("http://campaign-admin-v1.staging-b2w.atlas.b2w/new-discount-range");
 	    driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div/div/div/div/div/form/div[1]/div/input")).sendKeys("dimitri.lameri");
-	    driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div/div/div/div/div/form/div[2]/div/input")).sendKeys("Bwjessy12305");
+	    driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div/div/div/div/div/form/div[2]/div/input")).sendKeys("Bwjessy12306");
 	    driver.findElement(By.xpath("//button[@type='submit']")).click();
 	    driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[1]/div/button")).click();
 	    
