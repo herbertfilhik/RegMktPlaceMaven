@@ -35,8 +35,9 @@ public class AdesaoPromoFrGratisAmerTest {
     	//Americanas
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[2]/div/div/select/option[2]")).click();
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[3]/div/div/input")).sendKeys("FreteGratisAmericanas");
-    	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[4]/div/div/div/div/div/div[1]/div/select/option[2]")).click();
-    	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[4]/div/div/div/div/div/div[2]/div/input")).sendKeys("12,00");
+    	//driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[4]/div/div/div/div/div/div[1]/div/select/option[2]")).click();
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[4]/div/div/div/div/div/div[2]/div/input")).sendKeys("12,00");
+    	System.out.println("cadastrando adesão");
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[5]/div/div[1]/div/div/div[1]/input")).sendKeys(" 21/06/2017 15:00");
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[5]/div/div[2]/div/div/div[1]/input")).sendKeys("221/06/2018 15:00");
     	driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div/div[2]/div/div/div[1]/section/div/div/div[6]/div/div[1]/div/div/input")).click();
